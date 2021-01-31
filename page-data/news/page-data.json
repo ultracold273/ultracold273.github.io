@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-pages-news-tsx","path":"/news/","result":{"data":{"allMarkdownRemark":{"nodes":[{"id":"2a85baff-e7dd-5b26-84c3-fb0209132900","fields":{"slug":"/opening/"},"frontmatter":{"title":"开张大吉","date":"2021.01.24"}}]}},"pageContext":{}},"staticQueryHashes":[]}
+{"componentChunkName":"component---src-pages-news-tsx","path":"/news/","result":{"data":{"allMarkdownRemark":{"nodes":[{"id":"e834456e-3a99-5364-b3c7-6af467806e39","fields":{"slug":"/opening/"},"frontmatter":{"title":"开张大吉","date":"2021.01.24"}}]}},"pageContext":{}},"staticQueryHashes":[]}
