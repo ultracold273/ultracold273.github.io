@@ -1,2 +1,0 @@
-(self.webpackChunkgatsby_starter_hello_world=self.webpackChunkgatsby_starter_hello_world||[]).push([[49],{564:function(t,a,e){"use strict";e.r(a);var r=e(6771),n=e(7294),l=e(4598),s=e(6362),o=e(4084),u=e(3431);(0,r.Z)("h1",{target:"e1xeeyen0"})({name:"g6lmsn",styles:"margin:0px;padding-bottom:20px"});a.default=function(t){var a=t.data.markdownRemark;return(0,u.tZ)(n.Fragment,null,(0,u.tZ)(o.Z,{post:"关于我"}),(0,u.tZ)(l.Z,null,(0,u.tZ)(s.Z,{source:a.rawMarkdownBody,math:!1})))}}}]);
-//# sourceMappingURL=component---src-pages-about-tsx-127fb9a243dfe67e9105.js.map

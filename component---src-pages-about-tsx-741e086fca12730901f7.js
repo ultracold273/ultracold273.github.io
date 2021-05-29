@@ -1,0 +1,2 @@
+(self.webpackChunklingxiao_website=self.webpackChunklingxiao_website||[]).push([[49],{564:function(t,a,e){"use strict";e.r(a);var n=e(6771),r=e(7294),s=e(4598),i=e(6362),l=e(4084),o=e(3431);(0,n.Z)("h1",{target:"e1v8d2340"})({name:"g6lmsn",styles:"margin:0px;padding-bottom:20px"});a.default=function(t){var a=t.data.markdownRemark;return(0,o.tZ)(r.Fragment,null,(0,o.tZ)(l.Z,{post:"关于我"}),(0,o.tZ)(s.Z,null,(0,o.tZ)(i.Z,{source:a.rawMarkdownBody,math:!1})))}}}]);
+//# sourceMappingURL=component---src-pages-about-tsx-741e086fca12730901f7.js.map
