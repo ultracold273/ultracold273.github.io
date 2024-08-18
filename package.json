@@ -1,0 +1,53 @@
+{
+  "name": "lingxiao-website",
+  "private": true,
+  "description": "Source code for lingxiao's blog, powered by Gatsby",
+  "version": "0.1.0",
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@emotion/core": "^11.0.0",
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "gatsby": "^5.13.0",
+    "gatsby-plugin-emotion": "^8.13.0",
+    "gatsby-plugin-image": "^3.13.0",
+    "gatsby-plugin-sharp": "^5.13.0",
+    "gatsby-remark-copy-linked-files": "^6.13.0",
+    "gatsby-remark-images": "^7.13.0",
+    "gatsby-remark-prismjs": "^7.13.0",
+    "gatsby-source-filesystem": "^5.13.0",
+    "gatsby-transformer-remark": "^6.13.0",
+    "gatsby-transformer-sharp": "^5.13.0",
+    "prismjs": "^1.23.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "react-markdown": "^9.0.0",
+    "rehype-katex": "^7.0.0",
+    "remark-copy-linked-files": "^1.5.0",
+    "remark-images": "^4.0.0",
+    "remark-math": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.4.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.5.0"
+  },
+  "overrides": {
+    "webpack-dev-middleware": "^5.3.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ultracold273/personal-website"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}
