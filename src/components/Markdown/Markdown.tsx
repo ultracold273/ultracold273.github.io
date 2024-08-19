@@ -6,7 +6,7 @@ import rehypeKatex from "rehype-katex"
 // import copyLinkedFiles from "remark-copy-linked-files"
 // import remarkImages from "remark-images"
 import 'katex/dist/katex.min.css'
-import { Console } from 'console';
+import { Element } from 'react-markdown/lib';
 
 interface IImageQuery {
     internal: { contentDigest: string; };
@@ -45,7 +45,7 @@ const StyledImage = styled.img`
 // https://github.com/remarkjs/react-markdown
 const markdownRenders = {
     blockquote: (props: any) => {
-        const text: string[] = (props.children[1].props.children[0]).split('\n')
+        const text: string[] = (props.children[1].props.children).split('\n')
         return (
             <Blockquote>
                 {text.map((value) => (
