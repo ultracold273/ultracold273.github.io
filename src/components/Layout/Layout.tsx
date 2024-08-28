@@ -4,6 +4,7 @@ import styled from '@emotion/styled'
 import Header from '../Header'
 
 type LayoutProps = {
+    fixRolling?: boolean
     children: any
 }
 
@@ -11,18 +12,25 @@ type ContainerProps = {
     width: number
 }
 
+type MainProps = {
+    fixRolling: boolean
+}
+
 const Container = styled.div<ContainerProps>`
     margin: ${ props => {
         const horizonMargin = ((props.width - 500) / 80 + 10).toString()
-        return "2% " + horizonMargin + "% 5% " + horizonMargin + "%;"
+        return "2% " + horizonMargin + "% 2% " + horizonMargin + "%;"
     }}
+    flex: 1;
 `
 
-const Main = styled.main`
+const Main = styled.main<MainProps>`
+    display: flex;
+    flex-direction: column;
     min-height: 100px;
-    padding-bottom: 30px;
+    padding-bottom: ${ props => props.fixRolling ? '0px' : '30px' };
     overflow: hidden;
-    margin-top: 50px;
+    height: ${ props => props.fixRolling ? '100vh' : 'auto' };
 `
 const Layout: React.FC<LayoutProps> = (props) => {
     // Outside useEffect, we are not allowed to use `document`
@@ -43,7 +51,7 @@ const Layout: React.FC<LayoutProps> = (props) => {
     }, [])
 
     return (
-        <Main>
+        <Main fixRolling={props.fixRolling ?? false}>
             <Header />
             <Container width={width}>
                 {props.children}

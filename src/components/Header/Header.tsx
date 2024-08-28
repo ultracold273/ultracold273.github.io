@@ -5,7 +5,7 @@ import Navigation from './Navigation'
 import Logo from './Logo'
 
 const Wrapper = styled.header`
-    position: fixed;
+    position: relative;
     top: 0;
     height: 50px;
     width: 100%;
