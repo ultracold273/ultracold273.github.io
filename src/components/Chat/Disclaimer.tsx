@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
+import DisplayText from '../../i18n/string.json'
+
 const Wrapper = styled.div`
     display: flex;
     justify-content: center;
@@ -23,7 +25,7 @@ const Disclaimer = () => {
     return (
         <>
             <Wrapper>
-                <Content>ChatGPT 也可能会犯错。请喝茶重要信息。</Content>
+                <Content>{DisplayText.disclaimer}</Content>
             </Wrapper>
         </>
     )

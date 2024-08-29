@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
+import DisplayText from '../../i18n/string.json'
+
 const Wrapper = styled.div`
     display: flex;
 `
@@ -62,7 +64,7 @@ const InputBar = () => {
             <Wrapper>
                 <FlexContainer>
                     <FileUploadPlaceHolder />
-                    <Input rows={1} placeholder='给ChatGPT发送消息' onInput={handleInput} />
+                    <Input rows={1} placeholder={DisplayText.input_placeholder} onInput={handleInput} />
                     <SendButton />
                 </FlexContainer>
             </Wrapper>

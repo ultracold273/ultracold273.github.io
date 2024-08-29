@@ -18,7 +18,19 @@ const MainWrapper = styled.main`
 `
 
 const ContentBox = styled.div`
+    display: flex;
+    flex-direction: column;
     flex: 1;
+`
+
+const StickyHeader = styled.div`
+    box-sizing: border-box;
+    position: sticky;
+    top: 0px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: lightgray;
+    height: 56px;
 `
 
 const BottomBox = styled.div`
@@ -44,7 +56,9 @@ const Chat = (props: PageProps) => {
         <>
             <Layout fixRolling={true}>
                 <MainWrapper>
-                    <ContentBox></ContentBox>
+                    <ContentBox>
+                        <StickyHeader />
+                    </ContentBox>
                     <BottomBox>
                         <InputBar />
                         <Disclaimer />

@@ -19,18 +19,21 @@ type MainProps = {
 const Container = styled.div<ContainerProps>`
     margin: ${ props => {
         const horizonMargin = ((props.width - 500) / 80 + 10).toString()
-        return "2% " + horizonMargin + "% 2% " + horizonMargin + "%;"
+        return "2% " + horizonMargin + "% 0% " + horizonMargin + "%;"
     }}
     flex: 1;
 `
 
 const Main = styled.main<MainProps>`
+    box-sizing: border-box;    
+    padding-top: 50px;
     display: flex;
+    width: 100%;
     flex-direction: column;
     min-height: 100px;
     padding-bottom: ${ props => props.fixRolling ? '0px' : '30px' };
     overflow: hidden;
-    height: ${ props => props.fixRolling ? '100vh' : 'auto' };
+    height: ${ props => props.fixRolling ? '98vh' : 'auto' };
 `
 const Layout: React.FC<LayoutProps> = (props) => {
     // Outside useEffect, we are not allowed to use `document`
@@ -51,12 +54,14 @@ const Layout: React.FC<LayoutProps> = (props) => {
     }, [])
 
     return (
-        <Main fixRolling={props.fixRolling ?? false}>
+        <>
             <Header />
-            <Container width={width}>
-                {props.children}
-            </Container>
-        </Main>
+            <Main fixRolling={props.fixRolling ?? false}>
+                <Container width={width}>
+                    {props.children}
+                </Container>
+            </Main>
+        </>
     )
 }
 

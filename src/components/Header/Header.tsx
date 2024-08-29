@@ -5,10 +5,11 @@ import Navigation from './Navigation'
 import Logo from './Logo'
 
 const Wrapper = styled.header`
-    position: relative;
+    position: fixed;
     top: 0;
     height: 50px;
     width: 100%;
+    min-width: 400px;
     background-color: #fff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
     z-index: 1;
