@@ -25,7 +25,10 @@ const ContentBox = styled.div`
 
 const StickyHeader = styled.div`
     box-sizing: border-box;
+    padding: 12px;
+    margin-bottom: 6px;
     position: sticky;
+    display: flex;
     top: 0px;
     align-items: center;
     justify-content: space-between;
@@ -33,22 +36,22 @@ const StickyHeader = styled.div`
     height: 56px;
 `
 
+const DropDown = styled.div`
+    font-family: ui-sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: darkgray;
+    line-height: 28px;
+    cursor: pointer;
+`
+const SignIn = styled.div`
+    height: 32px;
+    width: 32px;
+    border-radius: 9999px;
+    background-color: red;
+`
+
 const BottomBox = styled.div`
-`
-
-const Wrapper = styled.header`
-    position: flex;
-    top: 0;
-    height: 50px;
-    width: 100%;
-    background-color: ${backgroundColor};
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-    z-index: 1;
-`
-
-const Content = styled.div`
-    display: block
 `
 
 const Chat = (props: PageProps) => {
@@ -57,7 +60,10 @@ const Chat = (props: PageProps) => {
             <Layout fixRolling={true}>
                 <MainWrapper>
                     <ContentBox>
-                        <StickyHeader />
+                        <StickyHeader>
+                            <DropDown>ChatGPT</DropDown>
+                            <SignIn></SignIn>
+                        </StickyHeader>
                     </ContentBox>
                     <BottomBox>
                         <InputBar />
