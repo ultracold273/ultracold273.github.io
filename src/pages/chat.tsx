@@ -6,6 +6,8 @@ import Layout from '../components/Layout'
 import Disclaimer from '../components/Chat/Disclaimer'
 import InputBar from '../components/Chat/InputBar'
 
+import SEO from '../components/SEO'
+
 const backgroundColor = '#f5f5f5'
 
 const MainWrapper = styled.main`
@@ -74,3 +76,7 @@ const Chat = (props: PageProps) => {
 }
 
 export default Chat
+
+export const Head = () => (
+    <SEO post={"聊天"} />
+)

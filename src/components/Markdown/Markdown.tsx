@@ -66,13 +66,17 @@ const Markdown: React.FC<IMarkdownProps> = (props) => {
     const { source, math = false, images } = props;
     // const plugins = [ copyLinkedFiles ]
     const transformUri: UrlTransform = (src, _, __) => images?.find(imageNode => src.endsWith(imageNode.node.relativePath))?.node.publicURL ?? src
+    const markdownProps = {
+        children: source,
+        components: markdownRenders,
+        urlTransform: transformUri
+    }
     return (
         <div>
-            {(math) ? 
-                <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]} children={source} components={markdownRenders} urlTransform={transformUri} />
-            : <ReactMarkdown
-                children={source} components={markdownRenders} urlTransform={transformUri}
-            />}
+            <ReactMarkdown
+                {...(math ? { remarkPlugins: [remarkMath], rehypePlugins: [rehypeKatex] } : {})}
+                {...markdownProps} 
+            />
         </div>
     );
 }
