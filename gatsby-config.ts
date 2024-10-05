@@ -41,6 +41,9 @@ const config: GatsbyConfig = {
         path: `${__dirname}/content/assets`,
         name: `assets`,
       },
+    },
+    {
+      resolve: `gatsby-plugin-svgr`,
     }
   ],
 }

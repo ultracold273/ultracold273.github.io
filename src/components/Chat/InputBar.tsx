@@ -3,6 +3,9 @@ import styled from '@emotion/styled'
 
 import DisplayText from '../../i18n/string.json'
 
+import { ReactComponent as AttachmentIcon } from '../../resources/attachment.svg'
+import { ReactComponent as ArrowIcon } from '../../resources/arrow.svg'
+
 const Wrapper = styled.div`
     display: flex;
 `
@@ -18,12 +21,12 @@ const FlexContainer = styled.div`
 `
 
 const FileUploadPlaceHolder = styled.div`
-    height: 32px;
-    width: 32px;
+    // height: 32px;
+    // width: 32px;
     margin-left: 6px;
     margin-bottom: 4px;
     border-radius: 9999px;
-    background-color: darkgray;
+    background-color: lightgray;
 `
 
 const Input = styled.textarea`
@@ -50,6 +53,8 @@ const SendButton = styled.button`
     border-width: 0px;
     border-radius: 9999px;
     background-color: darkgray;
+    padding-block: 0px;
+    padding-inline: 0px;
 `
 
 const InputBar = () => {
@@ -63,9 +68,13 @@ const InputBar = () => {
         <>
             <Wrapper>
                 <FlexContainer>
-                    <FileUploadPlaceHolder />
+                    <FileUploadPlaceHolder>
+                        <AttachmentIcon />
+                    </FileUploadPlaceHolder>
                     <Input rows={1} placeholder={DisplayText.input_placeholder} onInput={handleInput} />
-                    <SendButton />
+                    <SendButton>
+                        <ArrowIcon />
+                    </SendButton>
                 </FlexContainer>
             </Wrapper>
         </>

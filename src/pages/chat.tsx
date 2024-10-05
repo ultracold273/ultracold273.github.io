@@ -6,8 +6,6 @@ import Layout from '../components/Layout'
 import Disclaimer from '../components/Chat/Disclaimer'
 import InputBar from '../components/Chat/InputBar'
 
-// import send from '../../static/arrow.svg'
-
 const backgroundColor = '#f5f5f5'
 
 const MainWrapper = styled.main`
